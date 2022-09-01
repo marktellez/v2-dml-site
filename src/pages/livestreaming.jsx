@@ -1,3 +1,4 @@
+import { set } from "date-fns";
 import { format } from "date-fns-tz";
 import Container from "@/ui/container";
 import Page from "@/ui/page";
@@ -57,27 +58,34 @@ export default function LivestreamingPage({}) {
           {[
             {
               startsAt: "9am Tuesday",
-              timeZone: "America/Mexico_City",
+              tz: "America/Mexico_City",
             },
             {
               startsAt: "9am Thursday",
-              timeZone: "America/Mexico_City",
+              tz: "America/Mexico_City",
             },
             {
               startsAt: "7am Saturday",
-              timeZone: "America/Mexico_City",
+              tz: "America/Mexico_City",
             },
-          ].map(({ startsAt, timeZone }, i) => {
+          ].map(({ startsAt, tz }, i) => {
             const [time, day] = startsAt.split(" ");
-            const [_, region] = timeZone.split("/");
-            const [__, hour, meridian] = time.split(/([0-9]+)/);
-            const pad = (val) =>
-              val.toString().length > 1 ? val.toString() : `0${val}`;
+            const [_, region] = tz.split("/");
+            const [__, hour] = time.split(/([0-9]+)/);
+            const timeAtHost = new Date(
+              set(new Date(), {
+                hours: hour,
+                minutes: 0,
+                seconds: 0,
+              }).toLocaleString("en-US", { timeZone: tz })
+            );
 
             const timestampAtHour = (hour) =>
-              `${format(new Date(), "yyyy-MM-dd")}T${pad(hour)}:00:00.000Z`;
+              `${format(timeAtHost, "yyyy-MM-dd")}T${hour}:00:00.000Z`;
 
-            const ts = timestampAtHour(hour);
+            const ts = timestampAtHour(
+              format(timeAtHost, "hh", { timeZone: tz })
+            );
             return (
               <button
                 key={ts}
