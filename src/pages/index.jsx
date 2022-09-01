@@ -1,7 +1,14 @@
-export default function Homepage() {
+import LandingPagesV1 from "@/features/landing-pages/v1";
+import Page from "@/ui/page";
+
+export default function Homepage({}) {
   return (
-    <div className="mt-16 container mx-auto">
-      <h1>Hello world.</h1>
-    </div>
+    <Page
+      {...{
+        title: "My awesome homepage",
+        description: "some description for google search results",
+      }}>
+      <LandingPagesV1 />
+    </Page>
   );
 }

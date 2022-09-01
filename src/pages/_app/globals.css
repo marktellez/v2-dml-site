@@ -2,10 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-white bg-gray-900;
+@font-face {
+  font-family: "AirbnbCerealBlack";
+  src: url("/fonts/AirbnbCerealBlack.woff");
 }
 
-h1 {
-  @apply text-5xl prose-2xl prose-invert;
+@font-face {
+  font-family: "AirbnbCerealBold";
+  src: url("/fonts/AirbnbCerealBold.woff");
+}
+
+@font-face {
+  font-family: "AirbnbCerealBook";
+  src: url("/fonts/AirbnbCerealBook.woff");
+}
+
+@font-face {
+  font-family: "AirbnbCerealMedium";
+  src: url("/fonts/AirbnbCerealMedium.woff");
+}
+
+@font-face {
+  font-family: "AirbnbCerealThin";
+  src: url("/fonts/AirbnbCerealThin.woff");
+}
+
+@font-face {
+  font-family: "Obelix";
+  src: url("/fonts/Obelix.woff");
+}
+
+body {
+  @apply bg-gray-900 text-white;
+}
+
+p {
+  @apply my-2  prose prose-invert;
 }
