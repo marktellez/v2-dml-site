@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import { format } from "date-fns-tz";
 import Container from "@/ui/container";
 import Page from "@/ui/page";
 import Image from "@/ui/image";
@@ -75,17 +75,9 @@ export default function LivestreamingPage({}) {
               val.toString().length > 1 ? val.toString() : `0${val}`;
 
             const timestampAtHour = (hour) =>
-              `${format(
-                new Date(
-                  new Date().toLocaleString("en-US", {
-                    timeZone,
-                  })
-                ),
-                "yyyy-MM-dd"
-              )}T${pad(hour)}:00:00.000Z`;
+              `${format(new Date(), "yyyy-MM-dd")}T${pad(hour)}:00:00.000Z`;
 
             const ts = timestampAtHour(hour);
-
             return (
               <button
                 key={ts}
@@ -93,8 +85,8 @@ export default function LivestreamingPage({}) {
                 <div className="inline-block">
                   <div className="text-[80px] font-black">{day}</div>
                   <div className="font-thin text-[28px] text-center -mt-[30px]">
-                    {JSON.stringify(new Date(timestampAtHour(hour)))}
-                    {meridian} {region.replace("_", " ")}({timeZone})
+                    {format(new Date(ts), "hhaaa", { timeZone })}{" "}
+                    {region.replace("_", " ")}
                   </div>
                 </div>
               </button>
