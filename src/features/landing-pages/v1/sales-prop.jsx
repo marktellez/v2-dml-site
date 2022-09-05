@@ -2,11 +2,11 @@ import Container from "@/ui/container";
 
 export default function SalesProp({}) {
   return (
-    <div className="w-screen bg-white text-gray-900 py-24">
+    <div className="w-screen overflow-x-hidden bg-white text-gray-900 py-32 sm:custom-clip">
       <Container>
-        <div className="flex items-start gap-8">
+        <div className="sm:flex items-center gap-8">
           <div>
-            <div className="text-[100px] font-black">Hello!</div>
+            <div className="text-[100px] font-black pt-16">Hello!</div>
 
             <p className="prose text-[24px] font-light">
               My name is Mark Tellez and I've been a{" "}

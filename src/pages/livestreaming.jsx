@@ -27,7 +27,7 @@ export default function LivestreamingPage({}) {
         </div>
       </Container>
 
-      <div className="w-screen bg-white text-gray-900 pt-12 sm:pt-24">
+      <div className="w-screen bg-white text-gray-900 pt-12 sm:pt-24 sm:custom-clip">
         <Container>
           <div className="flex items-center text-[22px] sm:gap-8 sm:text-[70px] justify-center font-black uppercase">
             <div>JavaScript</div>
@@ -77,7 +77,7 @@ export default function LivestreamingPage({}) {
                 hours: hour,
                 minutes: 0,
                 seconds: 0,
-              }).toLocaleString("en-US", { timeZone: tz })
+              })
             );
 
             const timestampAtHour = (hour) =>
@@ -93,6 +93,7 @@ export default function LivestreamingPage({}) {
                 <div className="inline-block">
                   <div className="text-[80px] font-black">{day}</div>
                   <div className="font-thin text-[28px] text-center -mt-[30px]">
+                    {JSON.stringify(timeAtHost)}
                     {format(new Date(ts), "hhaaa", { timeZone })}{" "}
                     {region.replace("_", " ")}
                   </div>

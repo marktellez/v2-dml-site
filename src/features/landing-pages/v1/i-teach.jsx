@@ -4,10 +4,12 @@ import Image from "@/ui/image";
 export default function ITeach({}) {
   return (
     <Container>
-      <div className="flex items-end -mb-8 ">
-        <div className="w-1/2">
-          <div className="py-16 px-32">
-            <h2 className="font-bold text-[80px]">I teach you one on one</h2>
+      <div className="sm:flex items-end -mb-8 ">
+        <div className="sm:w-1/2">
+          <div className="sm:py-16 sm:px-32">
+            <h2 className="font-bold text-[50px] sm:text-[80px]">
+              I teach you one on one
+            </h2>
             <p className="prose prose-invert font-thin text-[24px] text-white">
               sharing your keyboard and conversing using our voices in a
               friendly, comfortable manner.
@@ -27,7 +29,7 @@ export default function ITeach({}) {
             </p>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="sm:w-1/2">
           <Image src="/images/mark2.png" className="w-[584px] h-[741px]" />
         </div>
       </div>

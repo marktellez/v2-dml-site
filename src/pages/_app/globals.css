@@ -32,6 +32,12 @@
   src: url("/fonts/Obelix.woff");
 }
 
+@layer utilities {
+  .custom-clip {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  }
+}
+
 body {
   @apply bg-gray-900 text-white;
 }
