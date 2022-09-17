@@ -24,10 +24,15 @@ export default function Hero({}) {
           <div className="w-full flex justify-center absolute right-0 -bottom-28 z-40">
             <div className="text-center">
               As seen on
-              <Image
-                className=" w-[113px] h-[80px]"
-                src="/images/youtube.png"
-              />
+              <a
+                href="https://youtube.com/devmentorlive"
+                target="_blank"
+                rel="noreferrer">
+                <Image
+                  className=" w-[113px] h-[80px]"
+                  src="/images/youtube.png"
+                />
+              </a>
             </div>
           </div>
         </div>

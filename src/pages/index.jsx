@@ -5,8 +5,9 @@ export default function Homepage({}) {
   return (
     <Page
       {...{
-        title: "My awesome homepage",
-        description: "some description for google search results",
+        title: "ReactJS Mentorship | JavaScript Mentorship",
+        description:
+          "Mark has been a web developer since the 90s, and has mastered modern web development.",
       }}>
       <LandingPagesV1 />
     </Page>

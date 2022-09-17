@@ -14,15 +14,7 @@ export default function Header({}) {
           {[
             {
               href: "/",
-              label: "live mentorship",
-            },
-            {
-              href: "/livestreaming",
-              label: "livestreaming",
-            },
-            {
-              href: "/video-tutorials",
-              label: "video tutorials",
+              label: "Web developer mentorship program",
             },
           ].map(({ href, label }) => (
             <Link {...{ href }} key={label}>

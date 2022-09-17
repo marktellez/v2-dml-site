@@ -61,6 +61,10 @@ export default function LivestreamingPage({}) {
               tz: "America/Mexico_City",
             },
             {
+              startsAt: "9am Tuesday",
+              tz: "America/Mexico_City",
+            },
+            {
               startsAt: "9am Thursday",
               tz: "America/Mexico_City",
             },
