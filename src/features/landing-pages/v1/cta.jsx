@@ -1,5 +1,7 @@
 import Container from "@/ui/container";
 
+import BookButton from "@/ui/button/book";
+
 export default function CTA({}) {
   return (
     <Container>
@@ -12,9 +14,7 @@ export default function CTA({}) {
           </p>
         </div>
         <div className="sm:w-1/2 px-16">
-          <button className="font-beast text-3xl text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] bg-red-500 py-6 px-12">
-            Book now
-          </button>
+          <BookButton />
         </div>
       </div>
     </Container>

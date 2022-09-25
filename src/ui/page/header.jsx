@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import BookButton from "@/ui/button/book";
+
 export default function Header({}) {
   const { pathname } = useRouter();
   return (
@@ -19,14 +21,17 @@ export default function Header({}) {
           ].map(({ href, label }) => (
             <Link {...{ href }} key={label}>
               <a
-                className={`block text-center sm:text-left whitespace-nowrap sm:px-6 py-1 ${
-                  pathname === href ? "bg-red-500 " : ""
+                className={`block text-center sm:text-left whitespace-nowrap sm:px-6 py-1 border-[2px] ${
+                  pathname === href
+                    ? "border-transparent "
+                    : "border-transparent"
                 }`}>
                 {label}
               </a>
             </Link>
           ))}
         </div>
+        <BookButton />
       </div>
     </header>
   );
