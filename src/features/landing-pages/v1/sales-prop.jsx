@@ -9,7 +9,7 @@ export default function SalesProp({}) {
             <div className="text-[100px] font-black pt-16">Hello!</div>
 
             <p className="prose text-[24px] font-light">
-              My name is Mark Tellez and I've been a{" "}
+              My name is Mark Tellez and I&apos;ve been a{" "}
               <span className="underline">paid programmer</span> for{" "}
               <span className="underline">25 years!</span>
             </p>

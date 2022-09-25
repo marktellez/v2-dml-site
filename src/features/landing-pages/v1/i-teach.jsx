@@ -4,7 +4,7 @@ import Image from "@/ui/image";
 export default function ITeach({}) {
   return (
     <Container>
-      <div className="sm:flex items-end -mb-8 ">
+      <div className="sm:flex items-end -mb-8 overflow-x-hidden">
         <div className="sm:w-1/2">
           <div className="sm:py-16 sm:px-32">
             <h2 className="font-bold text-[50px] sm:text-[80px]">
