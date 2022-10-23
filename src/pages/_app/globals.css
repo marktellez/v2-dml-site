@@ -39,7 +39,7 @@
 
   .reverse-clip {
     /*  */
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
   }
 }
 
