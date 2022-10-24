@@ -23,8 +23,8 @@
 }
 
 @font-face {
-  font-family: "AirbnbCerealThin";
-  src: url("/fonts/AirbnbCerealThin.woff");
+  font-family: "AirbnbCerealLight";
+  src: url("/fonts/AirbnbCerealLight.woff");
 }
 
 @font-face {
@@ -36,6 +36,11 @@
   .custom-clip {
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
   }
+
+  .reverse-clip {
+    /*  */
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+  }
 }
 
 body {
@@ -43,5 +48,5 @@ body {
 }
 
 p {
-  @apply my-2  prose prose-invert;
+  @apply my-1  prose prose-invert;
 }

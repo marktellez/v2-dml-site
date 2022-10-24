@@ -8,6 +8,7 @@ export default function Page({ children, title, description }) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
 
       <Header />
