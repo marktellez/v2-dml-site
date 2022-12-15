@@ -5,15 +5,15 @@ export default function Hero({}) {
   return (
     <Container>
       <div className="md:flex md:gap-16 flex-wrap sm:flex-nowrap ">
-        <div className="md:w-1/3 px-8">
+        <div className="md:w-1/3 px-8 flex flex-col justify-center items-center">
           <Image
             className="w-[345px] h-[345px]"
             src="/images/mark1.png"
             alt="Mark Tellez headshot"
           />
-          <div className="text-3xl text-center my-4">
-            <span className="uppercase font-bold">Mark Tellez</span>{" "}
-            <span className="font-light">10x developer</span>
+          <div className="my-4 flex flex-col items-center ">
+            <div className="text-xl uppercase font-bold">Mark Tellez</div>{" "}
+            <div className="font-light text-sm">Sr. developer</div>
           </div>
         </div>
         <div className="md:w-2/3 sm:py-10 px-4 relative">

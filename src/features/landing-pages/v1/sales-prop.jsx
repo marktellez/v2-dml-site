@@ -16,7 +16,7 @@ export default function SalesProp({}) {
 
             <p className="prose text-[20px] font-light">
               I started JavaScript way back in 1997 and I know the language in
-              its every detail, but that isn't what I teach you!
+              its every detail, but that isn&apos;t what I teach you!
             </p>
           </div>
           <div>

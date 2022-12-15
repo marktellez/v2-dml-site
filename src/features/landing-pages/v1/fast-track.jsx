@@ -4,11 +4,11 @@ export default function FastTrack({}) {
   return (
     <div className="w-screen bg-white text-gray-900 py-24 overflow-x-hidden">
       <Container>
-        <div className="sm:flex items-center">
-          <div className="uppercase font-black text-[50px] sm:w-1/2 sm:px-36">
+        <div className="flex items-center flex-col sm:w-1/2 justify-center mx-auto">
+          <div className="uppercase font-black text-[50px]">
             Fast track modern web development
           </div>
-          <div className="smw-1/2 text-[36px] ">
+          <div className="text-[36px] ">
             <ul>
               <li>JavaScript</li>
               <li>ReactJS</li>
